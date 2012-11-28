@@ -252,10 +252,12 @@
 		5B9A9C26CF0FCA3AA8EADA35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DYFloatingHeaderView/DYFloatingHeaderView-Prefix.pch";
 				INFOPLIST_FILE = "DYFloatingHeaderView/DYFloatingHeaderView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -270,6 +272,7 @@
 				5B9A9C26CF0FCA3AA8EADA35 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B9A979AAAF6D500F49156D4 /* Build configuration list for PBXProject "DYFloatingHeaderView" */ = {
 			isa = XCConfigurationList;

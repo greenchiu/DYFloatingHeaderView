@@ -25,13 +25,19 @@
     [super viewDidLoad];
 	
 	// Floating header
-    DYFloatingHeaderView *floatingHeader = [[DYFloatingHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, [DYFloatingHeaderView height])];
+    DYFloatingHeaderView *floatingHeader = [[DYFloatingHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, [DYFloatingHeaderView height]) fitTop:YES];
+
+    // new way.
+//    DYFloatingHeaderView *floatingHeader = [[DYFloatingHeaderView alloc]
+//                                            initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, [DYFloatingHeaderView height])
+//                                            fitTop:YES];
     [self.view addSubview:floatingHeader];
 
     // Table view
     self.listViewController = [[SampleListViewController alloc] init];
     self.listViewController.view.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
     self.listViewController.headerView = floatingHeader;
+    self.listViewController.tableView.contentInset = UIEdgeInsetsMake(40+30, 0, 0, 0);
     [self.view insertSubview:self.listViewController.view belowSubview:floatingHeader];
 }
 
