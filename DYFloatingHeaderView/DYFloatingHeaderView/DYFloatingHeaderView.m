@@ -97,7 +97,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if(self.fitTop) {
-        float marginTop = scrollView.contentInset.top == self.height ? scrollView.contentInset.top : scrollView.contentInset.top - self.height;
+        float marginTop = scrollView.contentInset.top == self.height ? 0 : scrollView.contentInset.top - self.height;
         
         float dy = -marginTop - scrollView.contentOffset.y;
         if(dy< -self.height + self.originY)
